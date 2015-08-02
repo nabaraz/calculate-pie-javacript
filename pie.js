@@ -2,7 +2,6 @@
 /*!
  * Calculate PIE c1.0
  *
- *
  * Date: 2015-07-30
  */
 
@@ -207,5 +206,3 @@ var calculatePI = (function(numOfDigits) {
 	}
 
 })();
-
-console.log(calculatePI(1000));
