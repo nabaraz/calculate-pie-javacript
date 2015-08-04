@@ -6,13 +6,13 @@
  */
 
 
-var calculatePI = (function(numOfDigits) {
+var calculatePI = (function(numOfDigits, params) {
 
 	//Holds PI
 	var PI = "";
 
 	//Holds time taken to calculate PI
-	var timetaken = "";
+	var timeTaken = "";
 
 	//Working on Base 10^11
 	var Base = Math.pow(10, 11);
@@ -174,7 +174,7 @@ var calculatePI = (function(numOfDigits) {
 
 
 
-	return function(num) {
+	return function(num, params) {
 
 		//Initialize timer
 		startTime = new Date();
@@ -197,8 +197,9 @@ var calculatePI = (function(numOfDigits) {
 		//Stop timer
 		endTime = new Date();
 
-		//Capture time
-		timeTaken = endTime.getTime() - startTime.getTime();
+		//Capture time and return if parameter is specified
+		timeTaken = endTime.getTime() - startTime.getTime() + 'ms';
+		if(params.timer) return [PI, timeTaken];
 
 		//Return PI
 		return PI;
