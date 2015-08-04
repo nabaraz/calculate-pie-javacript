@@ -13,11 +13,14 @@ calculatePI(numberOfDigits);
 calculatePI(10000);
 
 calculatePI(50000);
+
+calculatePI(100, {timer: 'yes'});
 ```
 
 
 ## Current Limitation / To do
 
+* More params
 * Accuracy is upto 63,199 digits
 * Experiment with higher base and optimized code to attain higher accuracy (possibly millions)
 
